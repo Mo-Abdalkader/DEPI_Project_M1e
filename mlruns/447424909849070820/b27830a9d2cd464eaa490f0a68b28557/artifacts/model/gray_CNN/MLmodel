@@ -1,0 +1,18 @@
+artifact_path: model/gray_CNN
+flavors:
+  keras:
+    data: data
+    keras_backend: tensorflow
+    keras_version: 3.5.0
+    save_exported_model: false
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.keras
+    python_version: 3.12.5
+mlflow_version: 2.17.0
+model_size_bytes: 8430497
+model_uuid: 3af8f0ee05894902b8a4e833d984e757
+run_id: b27830a9d2cd464eaa490f0a68b28557
+utc_time_created: '2024-10-19 13:50:51.119799'

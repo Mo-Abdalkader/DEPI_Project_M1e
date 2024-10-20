@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1729433284491
+current_stage: Production
+description: ''
+last_updated_timestamp: 1729433291771
+name: best_model
+run_id: 3743be799b434d07b5c21a80829db70b
+run_link: ''
+source: file:///D:/Depi/final%20project/github/mlruns/447424909849070820/3743be799b434d07b5c21a80829db70b/artifacts/model/lung_model
+status: READY
+status_message: null
+storage_location: file:///D:/Depi/final%20project/github/mlruns/447424909849070820/3743be799b434d07b5c21a80829db70b/artifacts/model/lung_model
+user_id: null
+version: 1

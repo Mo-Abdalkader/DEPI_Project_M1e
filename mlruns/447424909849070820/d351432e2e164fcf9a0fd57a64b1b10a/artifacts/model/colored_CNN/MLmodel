@@ -1,0 +1,18 @@
+artifact_path: model/colored_CNN
+flavors:
+  keras:
+    data: data
+    keras_backend: tensorflow
+    keras_version: 3.5.0
+    save_exported_model: false
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.keras
+    python_version: 3.12.5
+mlflow_version: 2.17.0
+model_size_bytes: 8432801
+model_uuid: b79e5e67e2404d388c0b60cf554956ed
+run_id: d351432e2e164fcf9a0fd57a64b1b10a
+utc_time_created: '2024-10-19 13:47:33.018776'

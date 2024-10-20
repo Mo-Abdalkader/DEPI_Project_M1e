@@ -1,0 +1,11 @@
+              precision    recall  f1-score   support
+
+   colon_aca       1.00      0.98      0.99       104
+     colon_n       0.98      1.00      0.99       106
+    lung_aca       0.92      0.99      0.95       106
+      lung_n       1.00      0.93      0.97       107
+    lung_scc       0.99      0.98      0.99       105
+
+    accuracy                           0.98       528
+   macro avg       0.98      0.98      0.98       528
+weighted avg       0.98      0.98      0.98       528

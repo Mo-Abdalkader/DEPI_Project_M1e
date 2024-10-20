@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer Detector</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Adjust styles to ensure proper layout */
+        .container {
+            padding: 20px; /* Add padding to prevent content from touching edges */
+            text-align: center; /* Center text */
+        }
+
+        .uploaded-image-container {
+            width: 400px; /* Set a fixed width for the container */
+            height: 400px; /* Set a fixed height for the container */
+            overflow: hidden; /* Hide overflow */
+            margin: 20px auto; /* Center the container */
+            border: 2px solid #ccc; /* Add border for better visibility */
+            border-radius: 8px; /* Optional: rounded corners */
+            display: flex; /* Use flexbox for centering the image */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            background-color: #f9f9f9; /* Optional: background color */
+            padding: 5px; /* Add some padding to the container */
+        }
+
+        .uploaded-image {
+            max-width: 100%; /* Ensure image fits within the container */
+            max-height: 100%; /* Ensure image fits within the container */
+            object-fit: contain; /* Maintain aspect ratio */
+            margin: auto; /* Center image in the container */
+            display: block; /* Ensure it's treated as a block element */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cancer Detector</h1>
+        <p>Upload an image for cancer diagnosis.</p>
+
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <label for="file">Upload Image:</label>
+            <input type="file" id="file" name="file" accept="image/*" required>
+
+            <button type="submit" onclick="scrollToTop()">Predict</button>
+        </form>
+
+        {% if prediction %}
+        <div class="result">
+            <h2>Prediction Result</h2>
+            <p><strong>Class:</strong> {{ prediction }}</p>
+            <p><strong>Confidence:</strong> {{ confidence }}%</p>
+            <div class="uploaded-image-container">
+                <img src="{{ image_path }}" alt="Uploaded Image" class="uploaded-image">
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Smooth scroll to the top
+            });
+        }
+    </script>
+</body>
+</html>
